@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Лабораторна 4 — HTML форми</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 24px; }
+    h1 { margin: 0 0 16px; }
+    form { max-width: 640px; }
+    .row { display: flex; gap: 12px; align-items: center; margin: 10px 0; }
+    label { min-width: 160px; }
+    input[type="text"], input[type="date"], input[type="email"], textarea {
+      width: 100%;
+      max-width: 420px;
+      padding: 6px 8px;
+      box-sizing: border-box;
+    }
+    textarea { min-height: 90px; resize: vertical; }
+    fieldset { margin: 14px 0; padding: 10px 12px; }
+    legend { padding: 0 6px; }
+    .actions { margin-top: 12px; }
+    button { padding: 6px 14px; }
+    picture { display: block; margin-top: 18px; max-width: 1000px; }
+    img { max-width: 100%; height: auto; display: block; }
+    .hint { color: #444; font-size: 14px; margin-top: 8px; }
+  </style>
+</head>
+
+<body>
+  <h1>Моя перша HTML-форма</h1>
+
+  <!-- GET-версія: як у завданні -->
+  <form method="get" action="https://httpbin.org/get">
+    <!-- label через for/id -->
+    <div class="row">
+      <label for="user_name">Ім'я:</label>
+      <input id="user_name" name="user_name" type="text" placeholder="Введіть ім'я" required />
+    </div>
+
+    <!-- label як обгортка input (2-й спосіб) -->
+    <div class="row">
+      <label>Дата народження:
+        <input name="user_birthdate" type="date" required />
+      </label>
+    </div>
+
+    <div class="row">
+      <label for="user_email">Імейл:</label>
+      <input id="user_email" name="user_email" type="email" placeholder="name@example.com" required />
+    </div>
+
+    <div class="row">
+      <label for="user_message">Повідомлення:</label>
+      <textarea id="user_message" name="user_message" placeholder="Напишіть повідомлення..."></textarea>
+    </div>
+
+    <!-- чекбокси -->
+    <fieldset>
+      <legend>Ваші улюблені напої?</legend>
+      <label><input type="checkbox" name="fav_drinks" value="tea"> Чай</label><br />
+      <label><input type="checkbox" name="fav_drinks" value="coffee"> Кава</label><br />
+      <label><input type="checkbox" name="fav_drinks" value="juice"> Сік</label><br />
+      <label><input type="checkbox" name="fav_drinks" value="water"> Вода</label>
+    </fieldset>
+
+    <!-- радіокнопки -->
+    <fieldset>
+      <legend>Моя національність</legend>
+      <label><input type="radio" name="nationality" value="ukrainian" required> Українець/українка</label><br />
+      <label><input type="radio" name="nationality" value="polish"> Поляк/полька</label><br />
+      <label><input type="radio" name="nationality" value="other"> Інше</label>
+    </fieldset>
+
+    <div class="actions">
+      <button type="submit">Надіслати</button>
+      <button type="reset">Очистити</button>
+    </div>
+
+    <p class="hint">
+      Після відправки GET — у відповіді httpbin дивись поле <b>args</b>.
+      Для POST (нижче) — дивись <b>form</b>.  [oai_citation:2‡lab_4.docx (1).pdf](sediment://file_00000000688c71f499d164bdf43a5839)
+    </p>
+  </form>
+
+  <!-- picture: різні зображення для <468px та для десктопа -->
+  <picture>
+    <source media="(max-width: 468px)" srcset="https://picsum.photos/300/500" />
+    <source media="(min-width: 469px)" srcset="https://picsum.photos/1000/400" />
+    <img src="https://picsum.photos/1000/400" alt="Демонстраційне зображення" />
+  </picture>
+</body>
+</html>
