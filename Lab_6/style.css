@@ -1,35 +1,93 @@
+/* 1 */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f6fb;
-  margin: 20px;
+  font-family: serif;
+  font-size: 14px;
+  line-height: 1.25;
+  color: #777;
 }
 
+/* 2 */
+ul ul {
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* 3 */
+h1, h2 {
+  font-family: 'Cormorant Infant', serif;
+  letter-spacing: 0.5px;
+  color: #000;
+  text-transform: capitalize;
+}
+
+/* 4 */
 h1 {
-  color: #2c3e50;
+  font-size: 32px;
+}
+
+/* 5 */
+h2 {
+  font-size: 26px;
+}
+
+/* 6 */
+.double-line {
+  line-height: 2;
+}
+
+/* 7 */
+.mail-box {
+  width: 150px;
+  background-color: #E3FFF6;
+  border: 5px solid #C2E4C2;
+  padding: 5px 20px;
+}
+
+/* 8 */
+.mail-box {
+  box-sizing: border-box;
+}
+
+/* 9 */
+.mail-box a {
+  word-break: break-word;
+}
+
+/* 10 */
+.mail-box a {
+  display: block;
+}
+
+/* 11 */
+p {
+  text-align: justify;
+}
+
+/* 12 */
+.our-adv {
+  background-image: url('http://picsum.photos/id/357/700/400?blur=5');
+  padding-top: 30px;
+  padding-bottom: 60px;
+  color: #fff;
+  font-size: 16px;
+}
+
+/* 13 */
+.our-adv {
+  background-size: cover;
+  background-position: center;
+}
+
+/* 14 */
+h2 {
+  margin-top: 60px;
+  margin-bottom: 0;
+}
+
+/* допоміжне */
+.ruler {
+  width: 150px;
+  background-color: lime;
   text-align: center;
 }
 
-.card {
-  background: white;
-  padding: 15px;
-  margin: 15px 0;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.card h2 {
-  color: #2980b9;
-}
-
-button {
-  background: #2980b9;
-  color: white;
-  border: none;
-  padding: 10px 16px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #1f5f8b;
-}
