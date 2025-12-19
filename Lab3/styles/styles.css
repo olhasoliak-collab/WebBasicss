@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+ol {
+    border: 1px solid red;
+    padding: 10px;
+}
+
+ul {
+    border: 1px solid red;
+    padding: 10px;
+}
